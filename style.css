@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&family=Rubik+Bubbles&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+h1{
+    margin-top: 20px;
+    margin-bottom: 36px;
+    font-size: 4rem;
+    text-shadow: 0px 0px 20px grey,
+    0px 0px 20px grey;
+}
+
+.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-container{
+    width: fit-content;
+}
+
+.main-box{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+
+.box{
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+}
+
+.box span{
+    font-size: 6rem;
+    
+}
+
+.box:hover{
+    cursor: pointer;
+    background-color: rgb(235, 250, 245);
+}
+
+.img-container img{
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+
+.info-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-family: 'Prosto One', cursive;
+    align-items: center;
+}
+
+.brdt-0{
+    border-top: 0;
+}
+
+.brdb-0{
+    border-bottom: 0;
+}
+
+.brdr-0{
+    border-right: 0;
+}
+
+.brdl-0{
+    border-left: 0;
+}
+
+.line{
+    background-color: red;
+    position: absolute;
+    width: 0vw;
+    height: 4px;
+    transition: width 1s ease-in;
+    z-index: 100;
+}
+
+@media screen and (max-width : 500px) {
+    .game-container{
+        flex-wrap: wrap;
+    }
+    .info-container{
+        margin-top: 30px;
+    }
+    .main-box{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
