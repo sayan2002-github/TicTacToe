@@ -10,7 +10,12 @@ nav{
     color: white;
 }
 
+body{
+    background-color: rgb(7, 37, 27);
+}
+
 h1{
+    color: rgb(209, 249, 227);
     margin-top: 20px;
     margin-bottom: 36px;
     font-size: 4rem;
@@ -36,7 +41,7 @@ h1{
 }
 
 .box{
-    border: 3px solid black;
+    border: 3px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,11 +50,12 @@ h1{
 
 .box span{
     font-size: 8rem; 
+    color: white;
 }
 
 .box:hover{
     cursor: pointer;
-    background-color: rgb(235, 250, 245);
+    background-color: rgb(91, 155, 134);
 }
 
 .img-container img{
@@ -63,6 +69,7 @@ h1{
     justify-content: center;
     font-family: 'Prosto One', cursive;
     align-items: center;
+    color: white;
 }
 
 .brdt-0{
@@ -82,12 +89,13 @@ h1{
 }
 
 .line{
-    background-color: red;
+    background-color: #ff3737;
     position: absolute;
     width: 0vw;
-    height: 4px;
+    height: 5px;
     transition: width 1s ease-in;
     z-index: 100;
+    border-radius: 10px;
 }
 
 #alertSwitch{
@@ -110,6 +118,28 @@ h1{
     }
     .box span{
         font-size: 4rem; 
+    }
+    .line{
+        height: 5px;
+    }
+}
+
+@media screen and (max-width : 1000px) and (min-width : 501px) {
+    h1{
+        font-size: 4rem;
+    }
+    .game-container{
+        flex-wrap: wrap;
+    }
+    .info-container{
+        margin-top: 30px;
+    }
+    .main-box{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .box span{
+        font-size: 7rem; 
     }
     .line{
         height: 5px;

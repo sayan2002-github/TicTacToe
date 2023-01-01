@@ -1,4 +1,3 @@
-console.log("welcome to TicTacToe")
 let music = new Audio("music.mp3")
 let turn = new Audio("ting.mp3");
 let gameOver = new Audio("gameover.mp3");
@@ -17,31 +16,6 @@ const changeTurn = () => {
 }
 
 // Fuction to check the win
-// const checkWin = () => {
-//     let boxtext = document.getElementsByClassName("boxtext");
-//     let wins = [
-//         [0, 1, 2, 5, 5, 0],
-//         [3, 4, 5, 5, 15, 0],
-//         [6, 7, 8, 5, 25, 0],
-//         [0, 3, 6, -5, 15, 90],
-//         [1, 4, 7, 5, 15, 90],
-//         [2, 5, 8, 15, 15, 90],
-//         [0, 4, 8, 5, 15, 45],
-//         [2, 4, 6, 5, 15, 135]
-//     ]
-
-//     wins.forEach(element => {
-//         if ((boxtext[element[0]].innerText === boxtext[element[1]].innerText) && (boxtext[element[0]].innerText === boxtext[element[2]].innerText) && boxtext[element[0]].innerText !== '') {
-//             document.querySelector('.info').innerText = boxtext[element[0]].innerText + " won!!!"
-//             isGameover = true;
-//             gameOver.play();
-//             document.querySelector('.img-container').getElementsByTagName('img')[0].style.width = "120px";
-//             document.querySelector('.line').style.width = '20vw';
-//             document.querySelector('.line').style.transform = `translate(${element[3]}vw, ${element[4]}vw) rotate(${element[5]}deg)`;
-//         }
-//     })
-// }
-
 const checkWin = () => {
     let boxtext = document.getElementsByClassName("boxtext");
     if (x.matches) { // If media query matches
@@ -94,6 +68,7 @@ const checkWin = () => {
 
 }
 
+// Media query
 var x = window.matchMedia("(max-width: 500px)")
 
 // Game Logic
@@ -106,7 +81,7 @@ Array.from(boxes).forEach(element => {
             player = changeTurn();
             turn.play();
             checkWin();
-            x.addListener(checkWin)
+            x.addListener(checkWin);
             if (!isGameover) {
                 document.querySelector('.info').getElementsByTagName('big')[0].innerText = player;
             }
